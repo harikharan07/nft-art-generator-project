@@ -1,6 +1,6 @@
 
 
-
+this project is created for buidl it hackathon
 Created nft art  generative art by using the canvas api and node js. Before you use the generation engine, make sure you have node.js and yarn installed.
 
 ## Installation 🛠️
@@ -74,7 +74,7 @@ const layerConfigurations = [
 ];
 ```
 
-
+you can put any layers here the above one is just the example to show you !
 
 Here is a list of the different blending modes that you can optionally use.
 
