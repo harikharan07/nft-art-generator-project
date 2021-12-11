@@ -1,39 +1,14 @@
-# Thank You HashLips 👄 Upgraded and Articulated by ScrawnyViking aka TWECryptoDev
 
-![](https://gateway.pinata.cloud/ipfs/QmeQTg75CRKSVUTnMnRM2RyRrBQDYT6G6oxzR4xmWSEH1U)
 
-All the code in these repos was created and explained by HashLips - Please go subscribe to him if you want to learn how to code your own DApps and do everything from scratch! ❤️
 
-If you're brand new and want a step by step dummy version tutorial of how to install and do everything, watch my last video here... We're going to go fast in this video and is for people who know how to run a terminal and type basic commands.
-https://www.youtube.com/watch?v=5s6-eMAOORQ
-
-To find out more please visit:
-
-[📺 YouTube](https://www.youtube.com/channel/UCesmc1HdFKXqmNFZwT0M9GQ)
-
-[💬 Telegram](https://t.me/TBCToken)
-
-[🐦 Twitter](https://twitter.com/TWECryptoDev)
-
-[ℹ️ Website](https://TomorrowWontExist.com)
-
-[🐝 TBC Token Pre Sale NFTs](https://opensea.io/collection/tweethebee)
-
-![](https://gateway.pinata.cloud/ipfs/QmUvPLroxDvBoaGDrKh4qEYCTvfyK6hJduWrMwUUHF9Hor)
-
-[🐝 The Bee Collaborative rng NFT](https://tomorrowwontexist.github.io/tbcnft/)<p/> *Game and Roadmap Coming Soon*
-
-# ScrawnyViking A-Z How to Launch your own NFT Collection using HashLips Art Engine 🔥
-
-![](https://github.com/HashLips/hashlips_art_engine/blob/main/banner.png)
-Create generative art by using the canvas api and node js. Before you use the generation engine, make sure you have node.js and yarn installed.
+Created nft art  generative art by using the canvas api and node js. Before you use the generation engine, make sure you have node.js and yarn installed.
 
 ## Installation 🛠️
 
 If you are cloning the project then run this first, otherwise you can download the source code on the release page and skip this step.
 
 ```sh
-git clone https://github.com/TomorrowWontExist/ArtGenerator
+git clone https://github.com/tarunwalia12345/nft-art-generator-project
 ```
 
 Go to the root of your folder and run this command if you have yarn installed.
@@ -54,93 +29,52 @@ Create your different layers as folders in the 'layers' directory, and add all t
 
 Once you have all your layers, go into `src/config.js` and update the `layerConfigurations` objects `layersOrder` array to be your layer folders name in order of the back layer to the front layer.
 
-_Example:_ If you were creating a portrait design, you might have a background, then a head, a mouth, eyes, eyewear, and then headwear, so your `layersOrder` would look something like this:
+
+Example :_ if you were creating a portrait design you might have background, then a suit, then shoulder ,then a skin , then mask ,then a hair , then accessories then headwear so your layerrder would look like this 
 
 ```js
 const layerConfigurations = [
   {
     growEditionSizeTo: 10, // Example to show you the inifite amount of possibilities.
     layersOrder: [
-      { name: "1-background" },
-      { name: "2-extra" },
-      { name: "3-character" },
-      { name: "4-prop" },
-      { name: "5-expression" },
-      { name: "6-face" },
+      { name: "background" },
+      { name: "upper stomach" },
+      { name: "stomach" },
+      { name: "hips" },
+      { name: "obliques" },
+      { name: "arm joint" },
+      { name: "head" },
+      { name: "upper neck" },
+      { name: "neck" },
+      { name: "body" },
+      { name: "left fore arm" },
+      { name: "right arm" },
+      { name: "left arm" },
+      { name: "hand shadow" },
+      { name: "hands" },
+      { name: "right fore arm" },
+      { name: "ear base" },
+      { name: "ear" },
+      { name: "mouth" },
+      { name: "eye base" },
+      { name: "oculus" },
+      
+     
+      { name: "antena" },
+      { name: "shoulders" },
+      { name: "shoulders cover" },
+      { name: "elbows" },
+      { name: "elbows cover" },
+     
+      { name: "chest" },
+      { name: "outline" },
+      
     ],
   },
 ];
 ```
 
-The `name` of each layer object represents the name of the folder (in `/layers/`) that the images reside in.
 
-Optionally you can now add multiple different `layerConfigurations` to your collection. Each configuration can be unique and have different layer orders, use the same layers or introduce new ones. This gives the artist flexibility when it comes to fine tuning their collections to their needs.
-
-_Example:_ If you were creating a portrait design, you might have a background, then a head, a mouth, eyes, eyewear, and then headwear and you want to create a new race or just simple re-order the layers or even introduce new layers, then you're `layerConfigurations` and `layersOrder` would look something like this:
-
-```js
-const layerConfigurations = [
-  {
-    growEditionSizeTo: 10, // Example to show you the inifite amount of possibilities
-    layersOrder: [
-      { name: "1-background" },
-      { name: "2-extra" },
-      { name: "3-character" },
-      { name: "4-prop" },
-      { name: "5-expression" },
-      { name: "6-face" },
-    ],
-  },
-  {
-    growEditionSizeTo: 15, // 5 more like this, added eyewear
-    layersOrder: [
-      { name: "1-background" },
-      { name: "2-extra" },
-      { name: "3-character" },
-      { name: "4-prop" },
-      { name: "5-expression" },
-      { name: "6-face" },
-      { name: "7-eyewear" },
-    ],
-  },
-  {
-    growEditionSizeTo: 25, // 10 more, added headpiece
-    layersOrder: [
-      { name: "1-background" },
-      { name: "2-extra" },
-      { name: "3-character" },
-      { name: "4-prop" },
-      { name: "5-expression" },
-      { name: "6-face" },
-      { name: "7-eyewear" },
-      { name: "8-headpiece" },
-    ],
-  },
-]; // Now you can go and rename the pngs to which ever number you want them to be, to make the order more mixed.
-```
-
-Then optionally, update your `format` size, ie the outputted image size, and the `growEditionSizeTo` on each `layerConfigurations` object, which is the amount of variation outputted.
-
-If you want to play around with different blending modes, you can add a `blend: MODE.colorBurn` field to the layersOrder object. If you need a layers to have a different opacity then you can add the `opacity: 0.7` field to the layersOrder object as well. Both the `blend: MODE.colorBurn` and `opacity: 0.7` can be addes on the same layer if you want to.
-
-Here is an example on how you can play around with both filter fields:
-
-```js
-const layerConfigurations = [
-  {
-    growEditionSizeTo: 5,
-    layersOrder: [
-      { name: "1-background" },
-      { name: "2-extra" },
-      { name: "3-character", blend: MODE.colorBurn },
-      { name: "4-prop" },
-      { name: "5-expression" },
-      { name: "6-face", blend: MODE.overlay, opacity: 0.7 },
-      { name: "7-eyewear", opacity: 0.7 },
-    ],
-  },
-];
-```
 
 Here is a list of the different blending modes that you can optionally use.
 
@@ -191,90 +125,132 @@ The program will output all the images in the `build/images` directory along wit
 
 ```json
 {
-  "dna": "614932c9807faa6f1db822bde13daa33b881c34a",
+  "dna": "2f1e8102d0aa761c6002a7a2746943fc21874f47",
   "name": "#1",
-  "description": "This is the description of your NFT project, remember to replace this",
-  "image": "ipfs://QmNfPMWLPTEbFpBtPFy4wkYEHRVWcz8dzjziTcPbebzF53/1.png",
+  "description": "nft art generator project is a project build for buidl it hackathon where you can create nft collection by coding",
+  "image": "undefined/1.png",
   "edition": 1,
-  "date": 1632176579874,
+  "date": 1639244617735,
   "attributes": [
     {
-      "trait_type": "1-background",
-      "value": "astronaut"
+      "trait_type": "background",
+      "value": "background4"
     },
     {
-      "trait_type": "2-extra",
-      "value": "none"
+      "trait_type": "upper stomach",
+      "value": "upperStomach2"
     },
     {
-      "trait_type": "3-character",
-      "value": "Twee Pink Wings"
+      "trait_type": "stomach",
+      "value": "STOMACH1"
     },
     {
-      "trait_type": "4-prop",
-      "value": "soda"
+      "trait_type": "hips",
+      "value": "hips2"
     },
     {
-      "trait_type": "5-expression",
-      "value": "neutral"
+      "trait_type": "obliques",
+      "value": "obliques1"
     },
     {
-      "trait_type": "6-face",
-      "value": "gasmask"
+      "trait_type": "arm joint",
+      "value": "armjoint2"
+    },
+    {
+      "trait_type": "head",
+      "value": "head1"
+    },
+    {
+      "trait_type": "upper neck",
+      "value": "upperneck2"
+    },
+    {
+      "trait_type": "neck",
+      "value": "neck2"
+    },
+    {
+      "trait_type": "body",
+      "value": "body1"
+    },
+    {
+      "trait_type": "left fore arm",
+      "value": "left-fore-arm2"
+    },
+    {
+      "trait_type": "right arm",
+      "value": "right-Arm2"
+    },
+    {
+      "trait_type": "left arm",
+      "value": "leftArm1"
+    },
+    {
+      "trait_type": "hand shadow",
+      "value": "hand-shadow1"
+    },
+    {
+      "trait_type": "hands",
+      "value": "hands2"
+    },
+    {
+      "trait_type": "right fore arm",
+      "value": "right-fore-arm2"
+    },
+    {
+      "trait_type": "ear base",
+      "value": "ear-base2"
+    },
+    {
+      "trait_type": "ear",
+      "value": "ear1"
+    },
+    {
+      "trait_type": "mouth",
+      "value": "mouth2"
+    },
+    {
+      "trait_type": "eye base",
+      "value": "eyeBase1"
+    },
+    {
+      "trait_type": "oculus",
+      "value": "oculus1"
+    },
+    {
+      "trait_type": "antena",
+      "value": "antena"
+    },
+    {
+      "trait_type": "shoulders",
+      "value": "shoulders2"
+    },
+    {
+      "trait_type": "shoulders cover",
+      "value": "shoulderscover1"
+    },
+    {
+      "trait_type": "elbows",
+      "value": "elbows2"
+    },
+    {
+      "trait_type": "elbows cover",
+      "value": "elbowscover2"
+    },
+    {
+      "trait_type": "chest",
+      "value": "chest1"
+    },
+    {
+      "trait_type": "outline",
+      "value": "outline1"
     }
   ],
-  "compiler": "HashLips Art Engine"
+  "compiler": "NFT art generator project"
 }
 ```
 
 That's it, you're done.
 
-### Updating baseUri for IPFS
 
-You might possibly want to update the baseUri after you have ran your collection. To update the baseUri simply run:
-
-```sh
-node utils/updateBaseUri.js
-```
-
-### Printing rarity data (Experimental feature)
-
-To see the percentages of each attribute across your collection, run:
-
-```sh
-node utils/rarityData.js
-```
-
-The output will look something like this:
-
-```sh
-Trait type: 1-background
-{ trait: 'acryllica', chance: '16', occurrence: '8' }  
-{ trait: 'astronaut', chance: '16', occurrence: '20' } 
-{ trait: 'badacid', chance: '16', occurrence: '20' }   
-{ trait: 'bluespiral', chance: '16', occurrence: '28' }
-{ trait: 'dancefloor', chance: '16', occurrence: '8' } 
-{ trait: 'lightening', chance: '16', occurrence: '16' }
-
-Trait type: 2-extra
-{ trait: 'blue explosion', chance: '15', occurrence: '16' }
-{ trait: 'christmas lights', chance: '15', occurrence: '20' }
-{ trait: 'devil tail', chance: '5', occurrence: '4' }
-{ trait: 'dinosaurs', chance: '15', occurrence: '16' }
-{ trait: 'none', chance: '35', occurrence: '28' }
-{ trait: 'polaroids', chance: '10', occurrence: '12' }
-{ trait: 'spooky', chance: '5', occurrence: '4' }
-```
-
-Hope you create some awesome artworks with this code 👄 Thank you Hashlips!
-Created by Hashlips, edited and articulated by ScrawnyViking
-
-When you're all finished with your NFT's here, and we update your metadata .json files to the correct CID that we're going to go over in the video...
-NOW, we want to get the DApp (Minting Station with web3 connect) attached to your contract that we're about to deploy.
-
-run this command to get ScrawnyVikings Minting Station DApp<p/>
-```sh
-git clone https://github.com/TomorrowWontExist/MintingStationDApp.git
-```
 <p/>
-once it's downloaded, open the folder from your terminal and Follow the read me instructions provided, or keep watching the video!!
+once it's downloaded, open the folder from your terminal and Follow the read me instructions provided!
