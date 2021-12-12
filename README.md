@@ -30,7 +30,7 @@ Create your different layers as folders in the 'layers' directory, and add all t
 Once you have all your layers, go into `src/config.js` and update the `layerConfigurations` objects `layersOrder` array to be your layer folders name in order of the back layer to the front layer.
 
 
-Example :_ if you were creating a portrait design you might have background, then a suit, then shoulder ,then a skin , then mask ,then a hair , then accessories then headwear so your layerorder would look like this 
+Example :_ if you were creating a portrait design you might have background,upper stomach ,stomach,hips , etc so your layerorder would look like this 
 
 ```js
 const layerConfigurations = [
