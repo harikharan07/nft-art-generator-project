@@ -1,6 +1,6 @@
 
 
-this project is created for buidl it hackathon
+this project is created for buidl it hackathon.
 Created nft art  generative art by using the canvas api and node js. Before you use the generation engine, make sure you have node.js and yarn installed.
 
 ## Installation 🛠️
